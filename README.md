@@ -1,5 +1,5 @@
 
-# Cybersecurity Portfolio – [Your Name]
+# Cybersecurity Portfolio – Jeremiah Navarrete
 
 ## About Me
 I am an entry-level cybersecurity professional with CompTIA A+, Network+, and Security+ certifications. 
@@ -25,4 +25,4 @@ I am actively building hands-on experience in Security Operations, incident resp
 
 ## Contact
 - LinkedIn: [Your LinkedIn]
-- Email: [Your Email]
+- Email: 
