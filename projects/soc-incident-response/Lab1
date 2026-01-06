@@ -1,4 +1,4 @@
-#Incident Overview
+# Incident Overview
 
 Alert Type: UEBA – User Behavior Anomaly
 Scenario: Potential financial fraud involving company pension fund
@@ -8,13 +8,13 @@ A UEBA alert was triggered following anomalous user behavior associated with the
 multiple high-value bank transfers were authorized and sent to both domestic and international accounts. The incident 
 appeared to originate from a phishing-based email compromise.
 
-##Logs & Artifacts Analyzed
+## Logs & Artifacts Analyzed
 
 -Azure AD Audit Logs
 -Email message chain associated with CFO account
 -Inbox rules and mailbox configuration changes
 
-##Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 
 -Suspicious source IP addresses
 -Multiple failed login attempts from anomalous IPs
@@ -28,7 +28,7 @@ appeared to originate from a phishing-based email compromise.
   "DeleteMessage": true
 }
 
-##Analysis & Investigation Steps
+## Analysis & Investigation Steps
 
 1) Identified the initial phishing email targeting the CFO
 2) Confirmed email account compromise through login anomalies
@@ -37,7 +37,7 @@ appeared to originate from a phishing-based email compromise.
 5) Analyzed inbox rule creation and folder manipulation
 6) Reviewed keyword-based filtering rules designed to suppress alerts
 
-##Incident Response (NIST Framework)
+## Incident Response (NIST Framework)
 
 1) Preparation
 -Incident response team assembled
@@ -74,14 +74,14 @@ appeared to originate from a phishing-based email compromise.
 -Implement IP allow-listing for banking and email services
 -Improve monitoring for mailbox rule changes in SIEM
 
-##MITRE ATT&CK Mapping 
+## MITRE ATT&CK Mapping 
 
 -T1566.001 – Phishing: Spearphishing Attachment
 -T1078 – Valid Accounts
 -T1098 – Account Manipulation
 -T1114 – Email Collection
 
-##Key Takeaways
+## Key Takeaways
 
 -UEBA alerts are effective for detecting subtle executive account misuse
 -Mailbox rule abuse is a common persistence and evasion technique
