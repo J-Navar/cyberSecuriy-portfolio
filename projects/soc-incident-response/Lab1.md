@@ -10,18 +10,18 @@ appeared to originate from a phishing-based email compromise.
 
 ## Logs & Artifacts Analyzed
 
--Azure AD Audit Logs
--Email message chain associated with CFO account
--Inbox rules and mailbox configuration changes
+- Azure AD Audit Logs
+- Email message chain associated with CFO account
+- Inbox rules and mailbox configuration changes
 
 ## Indicators of Compromise (IOCs)
 
--Suspicious source IP addresses
--Multiple failed login attempts from anomalous IPs
--Geo-location anomalies when correlated with timestamps
--Creation of malicious inbox rules from suspicious IPs
--Creation of a hidden inbox folder to divert security and financial alerts
--Inbox rule configuration designed to evade detection:
+- Suspicious source IP addresses
+- Multiple failed login attempts from anomalous IPs
+- Geo-location anomalies when correlated with timestamps
+- Creation of malicious inbox rules from suspicious IPs
+- Creation of a hidden inbox folder to divert security and financial alerts
+- Inbox rule configuration designed to evade detection:
 
 {
   "subjectOrBodyContainsWords": "Withdrawal",
@@ -40,49 +40,49 @@ appeared to originate from a phishing-based email compromise.
 ## Incident Response (NIST Framework)
 
 1) Preparation
--Incident response team assembled
--Reviewed organizational policy requiring CFO authorization for transfers
--Referenced prior security awareness training related to phishing
+- Incident response team assembled
+- Reviewed organizational policy requiring CFO authorization for transfers
+- Referenced prior security awareness training related to phishing
 
 2) Identification
 
--Detected abnormal surge in high-value transfers over a short timeframe
--Correlated UEBA alert with Azure logs and email artifacts
--Confirmed malicious inbox rule creation and account misuse
+- Detected abnormal surge in high-value transfers over a short timeframe
+- Correlated UEBA alert with Azure logs and email artifacts
+- Confirmed malicious inbox rule creation and account misuse
 
 3) Containment
 
--Placed a temporary 48-hour hold on affected pension fund accounts
--Restricted CFO account access pending investigation
+- Placed a temporary 48-hour hold on affected pension fund accounts
+- Restricted CFO account access pending investigation
 
 4) Eradication
 
--Removed all malicious inbox rules and folders
--Blacklisted attacker IP addresses and associated email accounts
--Verified no persistence mechanisms remained
+- Removed all malicious inbox rules and folders
+- Blacklisted attacker IP addresses and associated email accounts
+- Verified no persistence mechanisms remained
 
 5) Recovery
 
--Reset compromised email credentials
--Enforced MFA on executive email accounts
--Initiated bank account changes to prevent further unauthorized transfers
+- Reset compromised email credentials
+- Enforced MFA on executive email accounts
+- Initiated bank account changes to prevent further unauthorized transfers
 
 6. Lessons Learned
 
--Restrict inbox rule creation for high-privilege accounts
--Strengthen phishing awareness training (focus on sender verification)
--Implement IP allow-listing for banking and email services
--Improve monitoring for mailbox rule changes in SIEM
+- Restrict inbox rule creation for high-privilege accounts
+- Strengthen phishing awareness training (focus on sender verification)
+- Implement IP allow-listing for banking and email services
+- Improve monitoring for mailbox rule changes in SIEM
 
 ## MITRE ATT&CK Mapping 
 
--T1566.001 – Phishing: Spearphishing Attachment
--T1078 – Valid Accounts
--T1098 – Account Manipulation
--T1114 – Email Collection
+- T1566.001 – Phishing: Spearphishing Attachment
+- T1078 – Valid Accounts
+- T1098 – Account Manipulation
+- T1114 – Email Collection
 
 ## Key Takeaways
 
--UEBA alerts are effective for detecting subtle executive account misuse
--Mailbox rule abuse is a common persistence and evasion technique
--Financial fraud incidents require rapid containment to limit impact
+- UEBA alerts are effective for detecting subtle executive account misuse
+- Mailbox rule abuse is a common persistence and evasion technique
+- Financial fraud incidents require rapid containment to limit impact
