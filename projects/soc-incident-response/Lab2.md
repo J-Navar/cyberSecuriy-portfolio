@@ -1,6 +1,6 @@
 # Incident Overview
 
-**Scenario:** MiddleMayhem Inc. – Admin Portal Compromise
+**Scenario:** MiddleMayhem (blueteamlabs.online) – Admin Portal Compromise
 
 **Alert Type:** Suspicious network activity / Web exploitation
 
