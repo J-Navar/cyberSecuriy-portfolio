@@ -18,6 +18,30 @@ The investigation began by identifying the web application’s underlying techno
 - Reviewed HTTP response headers for custom or framework-specific indicators
 This information was used to assess potential known vulnerabilities affecting the application.
 
+##SIEM Investigation (Splunk)
+
+### Queries & Analysis Performed
+
+- Searched web and SIEM logs for suspicious source IP activity:
+
+index=* (field_name) ip_source=<suspicious_ip>
+
+- Identified abnormal framework-related headers:
+
+index=* 
+| search x-middleware-subrequest
+
+- Correlated observed headers with known CVEs affecting the framework
+- Detected suspicious command execution patterns:
+
+index=* 
+| search "*nc*"
+
+- Identified outbound connections associated with Netcat reverse shell activity:
+
+index=* 
+| search <ip_used_for_reverse_shell>
+
 ## SIEM Investigation (Splunk)
 
 ### Queries & Techniques Used
