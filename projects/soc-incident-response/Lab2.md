@@ -1,8 +1,10 @@
 # Incident Overview
 
-Scenario: MiddleMayhem Inc. – Admin Portal Compromise
-Alert Type: Suspicious network activity / Web exploitation
-Data Source: SIEM (Splunk) Web & Network Logs
+**Scenario:** MiddleMayhem Inc. – Admin Portal Compromise
+
+**Alert Type:** Suspicious network activity / Web exploitation
+
+**Data Source:** SIEM (Splunk) Web & Network Logs
 
 The SOC team detected unusual traffic targeting the company’s administrative web portal. Although no breach 
 was initially confirmed, log analysis revealed evidence of authentication bypass, remote code execution, 
