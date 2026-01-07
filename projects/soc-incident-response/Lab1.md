@@ -1,6 +1,6 @@
 # Incident Overview
 
-**Scenario:** Bec-ky - Potential financial fraud involving company pension fund
+**Scenario:** Bec-ky (blueteamlabs.online) - Potential financial fraud involving company pension fund
 
 **Alert Type:** UEBA – User Behavior Anomaly
 
