@@ -1,8 +1,10 @@
 # Incident Overview
 
-Alert Type: UEBA – User Behavior Anomaly
-Scenario: Potential financial fraud involving company pension fund
-Data Sources: Azure Audit Logs, Email Artifacts
+**Scenario:** Bec-ky, Potential financial fraud involving company pension fund
+
+**Alert Type:** UEBA – User Behavior Anomaly
+
+**Data Sources:** Azure Audit Logs, Email Artifacts
 
 A UEBA alert was triggered following anomalous user behavior associated with the CFO’s account. Over a 48-hour period, 
 multiple high-value bank transfers were authorized and sent to both domestic and international accounts. The incident 
