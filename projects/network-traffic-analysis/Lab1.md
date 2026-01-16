@@ -25,6 +25,8 @@ DNS traffic was intentionally generated to simulate user-driven name resolution 
 dig google.com
 dig youtube.com
 dig openai.com
+```
+
 Analysis below focuses on google.com as a representative DNS transaction.
 
 DNS Investigation Results (google.com)
@@ -79,11 +81,8 @@ Short TTLs can indicate fast-flux or evasion techniques. This value is consisten
 9. DNS Query Count
 Total Queries: 3
 
-Filter Used:
+Filter Used: dns.flags.response == 0
 
-text
-Copy code
-dns.flags.response == 0
 SOC Relevance:
 Baselines query volume. Excessive or periodic queries may indicate automated beaconing.
 
@@ -93,53 +92,40 @@ Status: Yes (RD = 1)
 SOC Relevance:
 Standard client behavior. Unexpected recursion patterns may indicate misconfiguration or abuse.
 
-Findings & Security Interpretation
-Observed Behavior
+## Findings & Security Interpretation
+
+### Observed Behavior
 The DNS response resolved google.com to an IP address within the 172.x.x.x private address space, rather than a public Google IP.
 
-Root Cause Analysis
-The host operates within a VMware NAT environment
+### Root Cause Analysis
 
-DNS queries are handled by an internal DNS resolver or proxy
+- The host operates within a VMware NAT environment
+- DNS queries are handled by an internal DNS resolver or proxy
+- Resolution is rewritten before reaching public DNS infrastructure
 
-Resolution is rewritten before reaching public DNS infrastructure
+### SOC Implications
 
-SOC Implications
-This behavior represents split DNS, not malicious activity
+- This behavior represents split DNS, not malicious activity
+- Highlights the importance of understanding:
+     - Network topology
+     - NAT behavior
+     - Internal DNS infrastructure
+-Prevents false positives during investigations involving “unexpected” IP ranges
 
-Highlights the importance of understanding:
+## Detection & Monitoring Considerations
 
-Network topology
+- Validate DNS destinations against known internal resolvers
+- Correlate DNS queries with endpoint telemetry
+- Monitor for:
+     - Unusual record types (TXT, NULL)
+     - Abnormal TTL patterns
+     - High-frequency or periodic queries
+     - Non-standard DNS ports or protocols
 
-NAT behavior
-
-Internal DNS infrastructure
-
-Prevents false positives during investigations involving “unexpected” IP ranges
-
-Detection & Monitoring Considerations
-Validate DNS destinations against known internal resolvers
-
-Correlate DNS queries with endpoint telemetry
-
-Monitor for:
-
-Unusual record types (TXT, NULL)
-
-Abnormal TTL patterns
-
-High-frequency or periodic queries
-
-Non-standard DNS ports or protocols
-
-Skills Demonstrated
-DNS traffic analysis for security monitoring
-
-Packet-level investigation using Wireshark
-
-Identifying benign vs suspicious DNS behavior
-
-Understanding enterprise DNS architecture
-
-Applying network context to reduce false positives
+## Skills Demonstrated
+- DNS traffic analysis for security monitoring
+- Packet-level investigation using Wireshark
+- Identifying benign vs suspicious DNS behavior
+- Understanding enterprise DNS architecture
+- Applying network context to reduce false positives
 
