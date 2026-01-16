@@ -46,8 +46,8 @@ This playbook is intended as a **reference guide**, not a single incident walkth
 - ssh
 
 ### IP Address Filtering
-ip.addr == <IP_ADDRESS>
-ip.src == <IP_ADDRESS>
+- ip.addr == <IP_ADDRESS>
+- ip.src == <IP_ADDRESS>
 
 ### TCP & Port-Based Filtering
 - tcp.port == <PORT_NUMBER>
@@ -71,6 +71,8 @@ ip.src == <IP_ADDRESS>
 - and
 - or
 - not
+
+---
 
 ## Indicators of Suspicious Activity
 ### Port Scanning
@@ -109,11 +111,15 @@ ip.src == <IP_ADDRESS>
 - frame contains "login"
 - http.response.code >= 400
 
+---
+
 ## Findings Summary
 - Port Scanning Detected: Multiple SYN packets from the same source IP without ACK responses
 - Potential Data Exfiltration Activity: Repeated outbound requests to the same domain within short timeframes
 - Brute Force Attempts Identified: FTP and SSH authentication failures originating from a single source IP
 - Web Exploitation Attempts Observed: Repeated HTTP error responses triggered by the same source IP
+
+---  
 
 ## SOC Analyst Considerations
 - Validate whether source IPs belong to:
@@ -126,6 +132,8 @@ ip.src == <IP_ADDRESS>
      - Firewall logs
      - Endpoint telemetry
      - Establish baselines to reduce false positives
+
+---
 
 ## Next Steps
 ### MITRE ATT&CK Mapping
