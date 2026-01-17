@@ -10,11 +10,15 @@ A UEBA alert was triggered following anomalous user behavior associated with the
 multiple high-value bank transfers were authorized and sent to both domestic and international accounts. The incident 
 appeared to originate from a phishing-based email compromise.
 
+---
+
 ## Logs & Artifacts Analyzed
 
 - Azure AD Audit Logs
 - Email message chain associated with CFO account
 - Inbox rules and mailbox configuration changes
+
+---
 
 ## Indicators of Compromise (IOCs)
 
@@ -30,6 +34,8 @@ appeared to originate from a phishing-based email compromise.
   "DeleteMessage": true
 ```
 
+---
+
 ## Analysis & Investigation Steps
 
 1) Identified the initial phishing email targeting the CFO
@@ -38,6 +44,8 @@ appeared to originate from a phishing-based email compromise.
 4) Identified destination bank accounts receiving fraudulent transfers
 5) Analyzed inbox rule creation and folder manipulation
 6) Reviewed keyword-based filtering rules designed to suppress alerts
+
+---
 
 ## Incident Response (NIST Framework)
 
@@ -76,12 +84,16 @@ appeared to originate from a phishing-based email compromise.
 - Implement IP allow-listing for banking and email services
 - Improve monitoring for mailbox rule changes in SIEM
 
+---
+
 ## MITRE ATT&CK Mapping 
 
 - T1566.001 – Phishing: Spearphishing Attachment
 - T1078 – Valid Accounts
 - T1098 – Account Manipulation
 - T1114 – Email Collection
+
+---
 
 ## Key Takeaways
 
