@@ -40,37 +40,37 @@ This playbook is intended as a **reference guide**, not a single incident walkth
 ## Wireshark Display Filters Used
 
 ### General Protocol Filters
-- http
-- dns
-- ftp
-- ssh
+- `http`
+- `dns`
+- `ftp`
+- `ssh`
 
 ### IP Address Filtering
-- ip.addr == <IP_ADDRESS>
-- ip.src == <IP_ADDRESS>
+- `ip.addr == <IP_ADDRESS>`
+- `ip.src == <IP_ADDRESS>`
 
 ### TCP & Port-Based Filtering
-- tcp.port == <PORT_NUMBER>
-- tcp.flags.syn == 1
-- tcp.flags.ack == 0
-- tcp.len >= <SIZE>
+- `tcp.port == <PORT_NUMBER>`
+- `tcp.flags.syn == 1`
+- `tcp.flags.ack == 0`
+- `tcp.len >= <SIZE>`
 
 ### HTTP-Specific Filters
-- http.request.method == "GET"
-- http.host contains "<WEBSITE_NAME>"
-- frame contains "login"
+- `http.request.method == "GET"`
+- `http.host contains "<WEBSITE_NAME>"`
+- `frame contains "login"`
 
 ### Authentication & Error Detection
-- ftp contains "530"
-- ssh contains "Failed"
+- `ftp contains "530"`
+- `ssh contains "Failed"`
 
 ### Time-Based Analysis
-- frame.time_delta <= <SECONDS>
+- `frame.time_delta <= <SECONDS>`
 
 ### Logical Operators
-- and
-- or
-- not
+- `and`
+- `or`
+- `not`
 
 ---
 
@@ -80,27 +80,25 @@ This playbook is intended as a **reference guide**, not a single incident walkth
 - Repeated TCP SYN packets from a single source
 - No corresponding ACK packets
 - Attempts across multiple ports in short timeframes
-
 #### Detection Filter
-- tcp.flags.syn == 1 and tcp.flags.ack == 0
+- `tcp.flags.syn == 1 and tcp.flags.ack == 0`
 
 ### Potential Data Exfiltration
 #### Indicators
 - Multiple outbound requests to the same external domain
 - Abnormally large or frequent data transfers
 - Consistent communication intervals
-
 #### Detection Filters
-- http.host contains "<DOMAIN>"
-- tcp.len >= <SIZE>
+- `http.host contains "<DOMAIN>"`
+- `tcp.len >= <SIZE>`
 
 ### Brute Force Attempts (FTP / SSH)
 #### Indicators
 - Repeated authentication failures
 - Identical error messages from the same source IP
 #### Detection Filters
-- ftp contains "530"
-- ssh contains "Failed"
+- `ftp contains "530"`
+- `ssh contains "Failed"`
 
 ### Web Exploitation Attempts
 #### Indicators
@@ -108,8 +106,8 @@ This playbook is intended as a **reference guide**, not a single incident walkth
 - Requests targeting login pages or sensitive endpoints
 - Suspicious or malformed request patterns
 #### Detection Filters
-- frame contains "login"
-- http.response.code >= 400
+- `frame contains "login"`
+- `http.response.code >= 400`
 
 ---
 
