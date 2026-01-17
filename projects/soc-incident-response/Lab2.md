@@ -23,9 +23,9 @@ This information was used to assess potential known vulnerabilities affecting th
 ### Queries & Analysis Performed
 
 - Searched web and SIEM logs for suspicious source IP activity:
-
+```bash
 index=* (field_name) ip_source=<suspicious_ip>
-
+```
 - Identified abnormal framework-related headers:
 
 index=* 
