@@ -10,6 +10,8 @@ The SOC team detected unusual traffic targeting the company’s administrative w
 was initially confirmed, log analysis revealed evidence of authentication bypass, remote code execution, 
 and lateral movement within the environment.
 
+---
+
 ## Initial Reconnaissance
 
 The investigation began by identifying the web application’s underlying technologies.
@@ -17,6 +19,8 @@ The investigation began by identifying the web application’s underlying techno
 - Identified JavaScript framework and version from client-side source
 - Reviewed HTTP response headers for custom or framework-specific indicators
 This information was used to assess potential known vulnerabilities affecting the application.
+
+---
 
 ## SIEM Investigation (Splunk)
 
@@ -27,20 +31,19 @@ This information was used to assess potential known vulnerabilities affecting th
 index=* (field_name) ip_source=<suspicious_ip>
 ```
 - Identified abnormal framework-related headers:
-
-index=* 
-| search x-middleware-subrequest
-
+```bash
+index=* | search x-middleware-subrequest
+```
 - Correlated observed headers with known CVEs affecting the framework
 - Detected suspicious command execution patterns:
-
-index=* 
-| search "*nc*"
-
+```bash
+index=* | search "*nc*"
+```
 - Identified outbound connections associated with Netcat reverse shell activity:
-
-index=* 
-| search <ip_used_for_reverse_shell>
+```bash
+index=* | search <ip_used_for_reverse_shell>
+```
+---
 
 ## Indicators of Compromise (IOCs)
 
@@ -51,6 +54,8 @@ index=*
 - Evidence of lateral movement following initial compromise
 - Targeted account identified as a database server user account
 
+---
+
 ## Attack Chain Summary
 
 1) Technology fingerprinting of the web application
@@ -59,6 +64,8 @@ index=*
 4) Reverse shell establishment using Netcat
 5) Lateral movement across internal systems
 6) SSH brute-force attempts against additional hosts
+
+---
 
 ## Incident Response Actions (Recommended)
 
@@ -83,6 +90,8 @@ index=*
 - Harden admin portals with MFA and IP restrictions
 - Maintain an asset inventory of application frameworks and versions
 
+---
+
 ## MITRE ATT&CK Mapping
 
 - T1592 – Gather Victim Host Information
@@ -91,6 +100,8 @@ index=*
 - T1105 – Ingress Tool Transfer
 - T1021 – Remote Services
 - T1110 – Brute Force
+
+---
 
 ## Key Takeaways
 
