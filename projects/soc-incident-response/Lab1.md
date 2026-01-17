@@ -25,10 +25,10 @@ appeared to originate from a phishing-based email compromise.
 - Creation of a hidden inbox folder to divert security and financial alerts
 - Inbox rule configuration designed to evade detection:
 
-{
-  "subjectOrBodyContainsWords": "Withdrawal",
+```bash
+  "subjectOrBodyContainsWords": "Withdrawal"
   "DeleteMessage": true
-}
+```
 
 ## Analysis & Investigation Steps
 
