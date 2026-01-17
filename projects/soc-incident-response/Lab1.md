@@ -30,8 +30,8 @@ appeared to originate from a phishing-based email compromise.
 - Inbox rule configuration designed to evade detection:
 
 ```bash
-  "subjectOrBodyContainsWords": "Withdrawal"
-  "DeleteMessage": true
+  subjectOrBodyContainsWords: Withdrawal
+  DeleteMessage: true
 ```
 
 ---
