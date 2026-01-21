@@ -95,7 +95,7 @@ Processes were only escalated when execution context, behavior, and location ind
 - Signs of data access or potential exfiltration
 - Example observed command:
 ```bash
-net use Z: \FILESRV-01\SSF-FinancialRecords
+net use Z:\\FILESRV-01\SSF-FinancialRecords
 ```
 
 ### Escalation Indicators
