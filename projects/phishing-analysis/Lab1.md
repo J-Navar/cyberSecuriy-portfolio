@@ -163,3 +163,11 @@ Escalation was required when alerts showed:
 ## Disclaimer
 
 This project was completed in a controlled lab environment for educational purposes.
+
+## Screenshots
+
+<img width="3616" height="1677" alt="Screenshot from 2026-01-21 19-39-43" src="https://github.com/user-attachments/assets/45124178-2730-4b35-beae-15a06f7d50fb" />
+
+<img width="3672" height="1676" alt="Screenshot from 2026-01-21 19-46-40" src="https://github.com/user-attachments/assets/37bba238-4c68-47ba-9dc5-883e00ed0a0b" />
+
+<img width="3672" height="1676" alt="Screenshot from 2026-01-21 19-46-50" src="https://github.com/user-attachments/assets/2b42d935-531c-4c50-ba7c-58a6c8ba445c" />
