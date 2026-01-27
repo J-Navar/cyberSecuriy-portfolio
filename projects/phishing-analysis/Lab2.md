@@ -189,27 +189,27 @@ THEN alert authenticated_phish
 ```
 
 ### 2. X-Mailer Anomaly Detection
-```text
+```bash
 IF x_mailer IN ("gophish","phpmailer","sendmail")
 AND sender_domain IS external
 THEN alert mailer_anomaly
 ```
 
 ### 3. Consumer Email Abuse Detection
-```text
+```bash
 IF sender_domain IN ("gmail.com","outlook.com","yahoo.com")
 AND subject MATCHES ("finance","tax","IRA","password")
 THEN alert consumer_platform_abuse
 ```
 
 ### 4. Internal / RFC1918 URL Detection
-```text
+```bash
 IF url CONTAINS ("172.16.","10.","192.168.")
 THEN block OR quarantine
 ```
 
 ### 5. Campaign Correlation Detection
-```text
+```bash
 IF COUNT(sender) > 3
 WITHIN 30 minutes
 AND subject_similarity > 80%
@@ -217,14 +217,14 @@ THEN alert phishing_campaign
 ```
 
 ### 6. Post-Click Network Detection
-```text
+```bash
 IF destination_ip IS unknown
 AND http_method = POST
 THEN alert possible_credential_submission
 ```
 
 ### 7. User Behavior Correlation
-```text
+```bash
 IF user_clicked_link
 AND login_attempt FROM new_ip
 WITHIN 10 minutes
