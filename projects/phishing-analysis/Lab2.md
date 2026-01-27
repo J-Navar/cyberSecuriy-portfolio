@@ -265,3 +265,17 @@ THEN high_confidence_compromise
 ## Disclaimer
 - This lab was performed in a controlled environment for educational and defensive security research only.
 - All emails used were owned/created by me for educational and defensive security research purposes.
+
+## Screenshots
+<img width="2524" height="1536" alt="Screenshot from 2026-01-25 22-45-54" src="https://github.com/user-attachments/assets/42becf1c-6272-4227-8de4-f96b0aa18fd1" />
+
+<img width="3044" height="1730" alt="Screenshot from 2026-01-25 20-44-20" src="https://github.com/user-attachments/assets/7a203946-705b-42d9-bc95-1413301a5e51" />
+
+<img width="3659" height="1594" alt="Screenshot from 2026-01-25 20-38-56" src="https://github.com/user-attachments/assets/41ee9643-01a6-4277-b000-4bb512bffcd2" />
+
+<img width="3692" height="1302" alt="Screenshot from 2026-01-25 20-51-07" src="https://github.com/user-attachments/assets/d636f2c1-bf8f-45ba-876d-0aad209b4d85" />
+
+
+
+
+
