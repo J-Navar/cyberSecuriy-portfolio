@@ -182,7 +182,7 @@ All campaigns delivered to inbox.
 ## Detection Logic & Defensive Analytics
 
 ### 1. Authenticated Email + Risky Content
-```text
+```bash
 IF spf=pass AND dkim=pass AND dmarc=pass
 AND email_body CONTAINS ("urgent","verify","account")
 THEN alert authenticated_phish
