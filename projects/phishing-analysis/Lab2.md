@@ -40,8 +40,8 @@ This project is intended for **educational and defensive security research purpo
 
 ## Campaign Variants
 Three phishing email variants were tested:
-- **Basic**
-- **IRA-themed**
+- **Basic(Control)**
+- **IAR-themed(Immediate Action Required)**
 - **Personalized**
 
 Each campaign was sent to all three providers.
@@ -56,7 +56,7 @@ All emails passed SPF validation for Outlook and Gmail.
 | Campaign | Outlook | Gmail | Temp Email |
 |--------|--------|-------|------------|
 | Basic | Pass (74.125.224.53) | Pass (209.85.220.41) | Not Displayed |
-| IRA | Pass (209.85.128.194) | Pass (209.85.220.65) | Not Displayed |
+| IAR | Pass (209.85.128.194) | Pass (209.85.220.65) | Not Displayed |
 | Personal | Pass (74.125.224.50) | Pass (209.85.220.41) | Not Displayed |
 
 ---
@@ -67,7 +67,7 @@ DKIM signatures validated successfully.
 | Campaign | Outlook | Gmail | Temp Email |
 |--------|--------|-------|------------|
 | Basic | Pass | Pass | Pass |
-| IRA | Pass | Pass | Pass |
+| IAR | Pass | Pass | Pass |
 | Personal | Pass | Pass | Pass |
 
 - **Algorithm:** rsa-sha256  
@@ -81,7 +81,7 @@ DMARC passed for Outlook and Gmail.
 | Campaign | Outlook | Gmail | Temp Email |
 |--------|--------|-------|------------|
 | Basic | Pass | Pass | Not Displayed |
-| IRA | Pass | Pass | Not Displayed |
+| IAR | Pass | Pass | Not Displayed |
 | Personal | Pass | Pass | Not Displayed |
 
 - **Observed Policy:** `p=NONE`, `sp=QUARANTINE`
@@ -108,7 +108,7 @@ DMARC passed for Outlook and Gmail.
 | Campaign | Folder | Notes |
 |--------|-------|------|
 | Basic | Inbox | Link functional |
-| IRA | Spam | Link functional |
+| IAR | Spam | Link functional |
 | Personal | Inbox | Link functional |
 
 ---
