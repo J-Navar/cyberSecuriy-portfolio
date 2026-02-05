@@ -1,4 +1,4 @@
-# 🛡️ SIEM Lab: Attack Detection & Analysis Using Splunk
+# SIEM Lab: Attack Detection & Analysis Using Splunk
 
 ## Overview
 This project demonstrates hands-on experience using **Splunk Enterprise as a SIEM** to detect, analyze, and respond to common attacker techniques on a Linux host.  
