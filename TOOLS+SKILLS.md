@@ -31,4 +31,6 @@ A quick reference of tools and key skills demonstrated across the cybersecurity 
 
 *Author: Jeremiah Navarrete – Aspiring Cybersecurity Analyst | Focused on SOC & Threat Detection*
 
+*Email: Jeremiah.navarrete@yahoo.com*
+
 *Disclaimer: All labs performed in controlled, educational environments.*
