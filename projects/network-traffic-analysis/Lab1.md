@@ -65,7 +65,7 @@ Standard DNS behavior. Deviations such as:
 
 may indicate tunneling, evasion, or policy violations.
 
-**---**
+---
 
 4. Queried Domain
 
