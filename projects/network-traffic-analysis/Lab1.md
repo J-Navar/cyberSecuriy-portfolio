@@ -8,7 +8,7 @@ This lab mirrors real-world SOC workflows such as:
 - Validating expected network behavior
 - Distinguishing benign anomalies from suspicious activity
 
----
+___
 
 ## Lab Environment
 - **Operating System:** Kali Linux (VMware)
