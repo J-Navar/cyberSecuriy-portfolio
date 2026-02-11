@@ -1,5 +1,7 @@
 # DNS Traffic Analysis Lab – SOC / Blue Team Focus
 
+___
+
 ## Overview
 This lab demonstrates DNS traffic analysis from a **Security Operations Center (SOC)** perspective using **Wireshark**. The objective is to analyze DNS queries and responses to understand normal DNS behavior, identify infrastructure-related anomalies, and interpret how network architecture (NAT, virtualization, internal resolvers) affects traffic visibility.
 
