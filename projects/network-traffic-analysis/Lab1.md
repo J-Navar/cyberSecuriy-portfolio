@@ -1,7 +1,5 @@
 # DNS Traffic Analysis Lab – SOC / Blue Team Focus
 
-___
-
 ## Overview
 This lab demonstrates DNS traffic analysis from a **Security Operations Center (SOC)** perspective using **Wireshark**. The objective is to analyze DNS queries and responses to understand normal DNS behavior, identify infrastructure-related anomalies, and interpret how network architecture (NAT, virtualization, internal resolvers) affects traffic visibility.
 
@@ -18,7 +16,7 @@ ___
 - **Network Architecture:** Virtualized network with NAT
 - **Protocols Observed:** DNS over UDP
 
----
+___
 
 ## Traffic Generation
 DNS traffic was intentionally generated to simulate user-driven name resolution activity:
@@ -39,6 +37,7 @@ Analysis below focuses on google.com as a representative DNS transaction.
 SOC Relevance:
 Identifies the endpoint initiating the DNS request. In enterprise investigations, this IP would be mapped to a host, asset, or user account to determine intent and scope.
 
+---
 
 2. DNS Resolver (Destination)
 
@@ -47,6 +46,7 @@ Identifies the endpoint initiating the DNS request. In enterprise investigations
 SOC Relevance:
 Indicates the request was handled by an internal DNS resolver rather than directly querying public infrastructure. Internal resolvers are common in enterprise environments and may perform filtering, logging, or traffic inspection.
 
+---
 
 3. Transport Protocol
 
@@ -65,6 +65,7 @@ Standard DNS behavior. Deviations such as:
 
 may indicate tunneling, evasion, or policy violations.
 
+---
 
 4. Queried Domain
 
@@ -83,6 +84,7 @@ Domain reputation and context are critical in detecting:
 
 Unusual record types (TXT, NULL, excessive MX queries) can also indicate data exfiltration or tunneling attempts.
 
+---
 
 5. DNS Response
 
@@ -102,6 +104,7 @@ SOC Relevance:
 
 A TTL of 300 seconds is consistent with normal behavior.
 
+---
 
 6. DNS Query Volume
 
@@ -123,6 +126,7 @@ Query volume helps establish baseline behavior. Excessive or highly periodic DNS
 
 No abnormal frequency patterns were observed in this lab.
 
+---
 
 7. Recursion
 
@@ -131,6 +135,7 @@ No abnormal frequency patterns were observed in this lab.
 SOC Relevance:
 Standard client behavior. Unexpected recursion patterns or open resolver behavior in production environments may indicate misconfiguration or abuse.
 
+___
 
 ## Findings & Security Interpretation
 
