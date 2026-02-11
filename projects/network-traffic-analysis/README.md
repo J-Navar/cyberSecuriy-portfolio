@@ -3,7 +3,7 @@
 
 ---
 
-## 🔐 Project Overview
+## Project Overview
 
 This project demonstrates hands-on network traffic analysis from a Security Operations Center (SOC) perspective using Wireshark.
 
@@ -18,9 +18,9 @@ This folder contains both a **detection playbook** and a **guided DNS investigat
 
 ---
 
-## 📂 Project Contents
+## Project Contents
 
-### 📘 CheatSheet.md  
+### CheatSheet.md  
 **Wireshark Display Filter Playbook**
 
 A structured SOC-focused reference guide that includes:
@@ -39,7 +39,7 @@ This document reflects how analysts build reusable investigative references for 
 
 ---
 
-### 🔍 Lab1.md  
+### Lab1.md  
 **DNS Traffic Analysis – SOC / Blue Team Focus**
 
 A hands-on DNS investigation performed in a virtualized lab environment using:
@@ -70,7 +70,7 @@ The lab emphasizes distinguishing legitimate infrastructure behavior from malici
 
 ---
 
-## 🎯 Skills Demonstrated
+## Skills Demonstrated
 
 - Network traffic triage and packet inspection  
 - Wireshark display filter creation and refinement  
@@ -86,7 +86,7 @@ The lab emphasizes distinguishing legitimate infrastructure behavior from malici
 
 ---
 
-## 🚨 Security & Detection Focus
+## Security & Detection Focus
 
 This project simulates core SOC responsibilities, including:
 
@@ -103,7 +103,7 @@ This mindset is critical for reducing alert fatigue and avoiding unnecessary esc
 
 ---
 
-## 📈 Real-World Relevance
+## Real-World Relevance
 
 Network traffic analysis is foundational in:
 
@@ -117,7 +117,7 @@ The ability to interpret raw packet data and connect it to attack techniques is 
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Analyze malicious PCAP samples  
 - Correlate packet findings with SIEM alerts  
@@ -127,8 +127,8 @@ The ability to interpret raw packet data and connect it to attack techniques is 
 
 ---
 
-## 👤 Author  
+## Author  
 
-Juan Navar  
+Jeremiah Navarrete  
 Aspiring Cybersecurity Analyst | Focused on Defensive Security & Threat Detection
 
