@@ -157,6 +157,8 @@ The DNS response resolved google.com to an IP address within the 172.x.x.x priva
      - Internal DNS infrastructure
 -Prevents false positives during investigations involving “unexpected” IP ranges
 
+___
+
 ## Detection & Monitoring Considerations
 
 - Validate DNS destinations against known internal resolvers
@@ -166,6 +168,8 @@ The DNS response resolved google.com to an IP address within the 172.x.x.x priva
      - Abnormal TTL patterns
      - High-frequency or periodic queries
      - Non-standard DNS ports or protocols
+
+___
 
 ## Skills Demonstrated
 - DNS traffic analysis for security monitoring
