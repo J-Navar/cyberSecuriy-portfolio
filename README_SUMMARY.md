@@ -52,7 +52,7 @@ Emphasis on **phishing analysis**, **network traffic investigation**, and **SOC 
 
 ---
 
-## ⚡ Real-World Impact
+## Real-World Impact
 - Simulated **multi-stage attack chains** & post-compromise activity  
 - Experience with **SIEM, packet analysis, and alert correlation**  
 - Applied **MITRE ATT&CK techniques** in lab scenarios  
