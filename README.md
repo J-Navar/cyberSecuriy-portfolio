@@ -71,7 +71,7 @@ MITRE Techniques Covered:
 
 ---
 
-### 3️⃣ SOC Incident Response
+### 3 SOC Incident Response
 **Executive Account & Web Portal Compromise Simulations**
 
 Focus: Log analysis, web exploitation detection, lateral movement investigation, containment, and recovery.
