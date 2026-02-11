@@ -130,7 +130,7 @@ The ability to interpret raw packet data and connect it to attack techniques is 
 ## Author  
 
 Jeremiah Navarrete  
-Aspiring Cybersecurity Analyst | Focused on Defensive Security & Threat Detection
+Aspiring Cybersecurity Analyst | Focused on SOC & Threat Detection
 
 > Disclaimer: All labs were performed in controlled, educational environments. Email accounts, servers, and networks used were created for research and learning purposes only.
 
